@@ -1,0 +1,15 @@
+* {
+    background-color: rgb(0, 0, 0);
+    font-size: 100%
+}
+
+body {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: yellow;
+    font-size: larger;
+}
+
