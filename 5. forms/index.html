@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <link rel="icon" href="image.png">
+
 </head>
 
 <body>
@@ -47,31 +49,32 @@
                     <label for="veg">both</label>
                 </p>
             </fieldset>
-            </legend>
+            <br>
+            <fieldset>
+                <legend>you have pets?</legend>
+                <p>
+                    <input type="checkbox" name="pets" id="dog">
+                    <label for="pets">DOG</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="pets" id="cat">
+                    <label for="pets">CATS</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="pets" id="other">
+                    <label for="pets">OTHER(domestic and portable)</label>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>A NOTE</legend>
+                <label for="msg">your message: </label>
+                <br>
+                <textarea name="msg" id="msg" cols="20" rows="0" placeholder="type here">hey</textarea>
+            </fieldset>
+            <button type="submit">submit</button>
         </fieldset>
 
-        <fieldset>
-            <legend>you have pets?</legend>
-            <p>
-                <input type="checkbox" name="pets" id="dog">
-                <label for="pets">DOG</label>
-            </p>
-            <p>
-                <input type="checkbox" name="pets" id="cat">
-                <label for="pets">CATS</label>
-            </p>
-            <p>
-                <input type="checkbox" name="pets" id="other">
-                <label for="pets">OTHER(domestic and portable)</label>
-            </p>
-        </fieldset>
-        <fieldset>
-            <legend>A NOTE</legend>
-            <label for="msg">your message: </label>
-            <br>
-            <textarea name="msg" id="msg" cols="20" rows="0" placeholder="type here">hey</textarea>
-        </fieldset>
-        <button type="submit">submit</button>
     </form>
     <link rel="stylesheet" href="style.css">
 </body>
