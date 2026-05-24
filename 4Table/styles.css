@@ -2,8 +2,21 @@ body{
     background-color: black;
     color:white;
 }
-#topic{
-    text-align: center;
-    text-transform: capitalize;
-    text-decoration: underline;
+
+table, tr, th, td{
+    border : 1px solid #eee;
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    padding: .5rem;
+}
+
+
+@keyframes rainbow {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
 }

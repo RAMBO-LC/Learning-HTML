@@ -1,0 +1,240 @@
+/* ── Reset ── */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── Variables ── */
+:root {
+    --green: #00A86B;
+    --green-light: #e6f7f1;
+    --green-dark: #008a56;
+    --text-primary: #1a1a2e;
+    --text-secondary: #6b7280;
+    --border: #e5e7eb;
+    --bg: #f0f4f0;
+    --white: #ffffff;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.10);
+    --shadow-lg: 0 20px 48px rgba(0,168,107,0.15);
+    --radius: 1.25rem;
+}
+
+/* ── Body ── */
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(0,168,107,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0,168,107,0.05) 0%, transparent 50%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* ── Card Container ── */
+.card-container {
+    width: 100%;
+    max-width: 380px;
+}
+
+/* ── Card ── */
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ── Image ── */
+.image-container {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .profile-image {
+    transform: scale(1.05);
+}
+
+.cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.35) 100%);
+}
+
+/* ── Status dot ── */
+.status-dot {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    width: 13px;
+    height: 13px;
+    background: #22c55e;
+    border-radius: 50%;
+    border: 2.5px solid white;
+    box-shadow: 0 0 0 3px rgba(34,197,94,0.3);
+    animation: pulse 2s infinite;
+    z-index: 2;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.3); }
+    50%       { box-shadow: 0 0 0 6px rgba(34,197,94,0.1); }
+}
+
+/* ── Content ── */
+.content {
+    padding: 1.5rem;
+}
+
+/* ── Header ── */
+.header {
+    margin-bottom: 1rem;
+}
+
+.name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+}
+
+.title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+/* ── Bio ── */
+.bio {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+}
+
+/* ── Skills ── */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.skill {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--green-dark);
+    background: var(--green-light);
+    padding: 0.3rem 0.75rem;
+    border-radius: 99px;
+    letter-spacing: 0.02em;
+}
+
+/* ── Divider ── */
+.divider {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 1.25rem;
+}
+
+/* ── Contact ── */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a.contact-item:hover {
+    color: var(--green);
+}
+
+.contact-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--green-light);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ── Social ── */
+.social-row {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.social-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.social-btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+.social-btn:hover {
+    background: var(--green);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+    .card-container {
+        max-width: 100%;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+}
