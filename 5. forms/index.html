@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="https://httpbin.org/get" method="get" autocomplete="on">
+        <fieldset>
+            <legend>About you</legend>
+            <input type="text" id="name" name="name" placeholder="Name" autocomplete="on" required autofocus><br><br>
+            <input type="text" id="age" name="age" placeholder="age" autocomplete="on" required><br><br>
+            <input type="number" id="YOB" name="yob" value="2000" min="1995" max="2010" step="1"
+                placeholder="Year of Birth" autocomplete="on" required><br><br>
+            <input type="phone" id="phone" name="phone" placeholder="123 456 7890" pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
+                autocomplete="on" required><br><br>
+            <select name="drinks" id="drinks">
+                <optgroup label="brew">
+                    <option value="Cappuccino">Cappuccino</option>
+                    <option value="Black Coffee">Black Coffee</option>
+                    <option value="latte">latte</option>
+                    <option value="Americanno">Americanno</option>
+                    <option value="Mont Blanc">Mont Blanc</option>
+                </optgroup>
+                <optgroup label="bars">
+                    <option value="burbon">burbon</option>
+                    <option value="whiskey">whiskey</option>
+                    <option value="beer">beer</option>
+                    <option value="rum">rum</option>
+                </optgroup>
+            </select><br><br>
+            <fieldset>
+                <legend>Choice</legend>
+                <p>
+                    <input type="radio" name="food" value="veg">
+                    <label for="veg">veg</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" value="non-veg">
+                    <label for="veg">non-veg</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" value="both">
+                    <label for="veg">both</label>
+                </p>
+            </fieldset>
+            </legend>
+        </fieldset>
+
+        <fieldset>
+            <legend>you have pets?</legend>
+            <p>
+                <input type="checkbox" name="pets" id="dog">
+                <label for="pets">DOG</label>
+            </p>
+            <p>
+                <input type="checkbox" name="pets" id="cat">
+                <label for="pets">CATS</label>
+            </p>
+            <p>
+                <input type="checkbox" name="pets" id="other">
+                <label for="pets">OTHER(domestic and portable)</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>A NOTE</legend>
+            <label for="msg">your message: </label>
+            <br>
+            <textarea name="msg" id="msg" cols="20" rows="0" placeholder="type here">hey</textarea>
+        </fieldset>
+        <button type="submit">submit</button>
+    </form>
+    <link rel="stylesheet" href="style.css">
+</body>
+
+</html>
