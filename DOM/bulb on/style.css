@@ -1,0 +1,9 @@
+#bulb {
+    border-radius: 50%;
+    background-color: yellow;
+    width: 150px;
+    height: 150px;
+    text-align: middle;
+}
+
+body {}
