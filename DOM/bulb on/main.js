@@ -1,5 +1,7 @@
-var a = document.querySelector("#bulb")
-var b = document.querySelector("body")
+var a = document.querySelector("#bulb");
+var b = document.querySelector("body");
+
+var flag = 0;
 
 a.addEventListener("click", function () {
     if (a.innerHTML === "ON") {
@@ -7,14 +9,14 @@ a.addEventListener("click", function () {
         b.style.backgroundColor = "lightgray"
 
         a.innerHTML = "OFF";
-        console.log("LIGHT band")
+        console.log("LIGHT ON")
     }
     else {
         a.style.backgroundColor = "yellow"
         b.style.backgroundColor = "lightyellow"
 
         a.innerHTML = "ON";
-        console.log("LIGHT shuru")
+        console.log("LIGHT OFF")
 
     }
 

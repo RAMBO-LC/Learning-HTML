@@ -1,0 +1,89 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box1 {
+    width: 450px;
+    height: 960px;
+    background: rgb(173, 173, 173);
+    border-radius: 6%;
+    position: relative;
+}
+
+#box2 {
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 5%;
+
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+#box2 img {
+    height: 380px;
+    width: 380px;
+    border-radius: 5%;
+}
+
+#big-like {
+    position: absolute;
+    font-size: 100px;
+    color: red;
+    opacity: 0;
+    transform: scale(0);
+
+    transition: all 0.4s ease;
+}
+
+#big-like.show {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+
+
+#box3 {
+    width: 350px;
+    height: 35px;
+
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+
+    margin-bottom: 350px;
+    position: fixed;
+
+    gap: 1px;
+}
+
+#box3 i {
+    user-select: none;
+
+    font-size: 30px;
+}
+
+.ri-heart-3-fill {
+    color: red;
+}

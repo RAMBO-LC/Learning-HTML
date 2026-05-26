@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: salmon;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card h2 {
+    margin: 15px 0 5px;
+}
+
+.card p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+button {
+    background: cornflowerblue;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: royalblue;
+}
